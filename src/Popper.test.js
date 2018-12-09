@@ -121,7 +121,7 @@ describe('Popper component', () => {
     let renderCounter = 0;
     const wrapper = mount(
       <InnerPopper placement="top" referenceElement={referenceElement}>
-        {({ ref, style, placement, arrowProps }) => {
+        {({ ref, style, placement }) => {
           renderCounter++;
           return <div ref={ref} style={style} data-placement={placement} />;
         }}
