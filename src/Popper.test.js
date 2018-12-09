@@ -115,4 +115,16 @@ describe('Popper component', () => {
       virtualReferenceElement
     );
   });
+
+  it('scheduleUpdate should be called only once per state placement change on update', () => {
+    const referenceElement = document.createElement('div');
+    const wrapper = mountPopper({ referenceElement });
+    const spy = jest.spyOn(wrapper.instance(), 'scheduleUpdate');
+
+    wrapper.setProps({ placement: 'top' });
+    wrapper.update();
+
+    expect(spy).toHaveBeenCalledTimes(1);
+    expect(true).toBe(true)
+  });
 });
