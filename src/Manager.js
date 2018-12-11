@@ -1,6 +1,8 @@
 // @flow
 import * as React from "react";
-import createContext, { type Context } from "create-react-context";
+import createReactContext, { type Context  } from "create-react-context";
+
+const createContext = (React: any).createContext || createReactContext
 
 export const ManagerContext: Context<{
   getReferenceRef?: (?HTMLElement) => void,
