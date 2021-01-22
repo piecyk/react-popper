@@ -9,6 +9,7 @@ exports[`Popper component renders the expected markup 1`] = `
     <div
       style="position: absolute; left: 0px; transform: translate(0px, 0px);"
     />
+    bottom
   </div>
 </DocumentFragment>
 `;
